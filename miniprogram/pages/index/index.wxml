@@ -3,3 +3,13 @@
 <text class="title">hello word!</text>
 <text>ssssssss</text>
 <button size="mini">按钮</button>
+<!-- 数据绑定 {{}}-->
+<view> 名字：{{name}}</view>
+
+<!-- 列表显示 wx:for -->
+<view wx:for="{{student}}">{{item.id}}{{item.name}}{{item.age}}</view>
+
+<!-- 事件监听 -->
+<view>当前总数：{{count}}</view>
+<button size="mini" bindtap="click">+</button>
+<button size="mini" bindtap="clicksub">-</button>
