@@ -1,0 +1,5 @@
+<!--index.wxml-->
+
+<text class="title">hello word!</text>
+<text>ssssssss</text>
+<button size="mini">按钮</button>
