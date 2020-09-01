@@ -5,25 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    result:'尚未比较',
-    num1:0,
-    num2:0
+    result: '尚未比较',
+    num1: 0,
+    num2: 0
   },
-  change: function (e) {
-  this.data[e.target.dataset.id] = Number(e.detail.value) //获取输入的值
-  this.data[e.target.dataset.id] = Number(e.detail.value) 
+  fromsubmit(e) {
     // console.log(e);
-    // console.log(this.data.num1);
-    // console.log(this.data.num2);
-  },
-  bijiao(){
-   let result = ''
+    this.data.num1 = Number(e.detail.value.num1)
+    this.data.num2 = Number(e.detail.value.num2)
+    let result = ''
     if (this.data.num1 > this.data.num2) {
-        result = '第一个数大'
-    }else if(this.data.num1 < this.data.num2){
+      result = '第一个数大'
+    } else if (this.data.num1 < this.data.num2) {
       result = '第二个数大'
-    }else {
-     result = '两个数一样大'
+    } else {
+      result = '两个数一样大'
     }
     this.setData({
       result: result
