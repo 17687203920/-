@@ -1,4 +1,14 @@
-.title {
-  color:red
-  
+/* miniprogram/pages/index/index.wxss */
+view{
+ 
+  margin:50rpx;
+}
+input {
+  width: 600rpx;
+  margin-top: 20rpx;
+  border-bottom: 2px solid #ccc;
+}
+button {
+  margin: 50rpx;
+  letter-spacing: 12rpx;
 }

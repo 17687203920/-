@@ -1,5 +1,6 @@
 //app.js
 App({
+  // 监听小程序初始化
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -16,5 +17,6 @@ App({
     }
 
     this.globalData = {}
-  }
+  },
+ 
 })

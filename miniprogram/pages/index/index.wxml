@@ -1,5 +1,15 @@
-<!--index.wxml-->
-
-<text class="title">hello word!</text>
-<text>ssssssss</text>
-<button size="mini">按钮</button>
+<!--miniprogram/pages/index/index.wxml-->
+<view>
+  <text>请输入第一个数</text>
+  <input data-id="num1" type="number" bindchange="change" />
+</view>
+<view>
+  <text>请输入第二个数</text>
+  <input data-id="num2" type="number" bindchange="change" />
+</view>
+<button  bindtap="bijiao">比较</button>
+<view>
+  <text>
+    比较的结果是:{{result}}
+  </text>
+</view>
