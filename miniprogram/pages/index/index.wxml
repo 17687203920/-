@@ -1,18 +1,37 @@
-<!--miniprogram/pages/index/index.wxml-->
-<form action="" bindsubmit="fromsubmit">
-  <view>
-    <text>请输入第一个数</text>
-    <input name="num1" type="number" />
-  </view>
-  <view>
-    <text>请输入第二个数</text>
-    <input name="num2" type="number" />
-  </view>
-  <button form-type="submit">提交</button>
-  <button form-type="reset">重置</button>
-</form>
-<view>
-  <text>
-    比较的结果是:{{result}}
-  </text>
+<view class="result">
+  <view class="result-num">{{num}}</view>
+  <view class="result-op">{{op}}</view>
+</view>
+<view class="btns">
+ <view>
+  <view hover-class="bg" bindtap="resetBtn">C</view>
+  <view hover-class="bg" bindtap="delBtn">DEL</view>
+  <view hover-class="bg" bindtap="opBtn" data-id="%">%</view>
+  <view hover-class="bg" bindtap="opBtn" data-id="/">/</view>
+ </view>
+ <view>
+  <view hover-class="bg" bindtap="numBtn" data-id="7">7</view>
+  <view hover-class="bg" bindtap="numBtn" data-id="8">8</view>
+  <view hover-class="bg" bindtap="numBtn" data-id="9">9</view>
+  <view hover-class="bg" bindtap="opBtn" data-id="*">x</view>
+ </view>
+ <view>
+  <view hover-class="bg" bindtap="numBtn" data-id="4">4</view>
+  <view hover-class="bg" bindtap="numBtn" data-id="5">5</view>
+  <view hover-class="bg" bindtap="numBtn" data-id="6">6</view>
+  <view hover-class="bg" bindtap="opBtn" data-id="-">-</view>
+ </view>
+ <view>
+  <view hover-class="bg" bindtap="numBtn" data-id="1">1</view>
+  <view hover-class="bg" bindtap="numBtn" data-id="2">2</view>
+  <view hover-class="bg" bindtap="numBtn" data-id="3">3</view>
+  <view hover-class="bg" bindtap="opBtn" data-id="+">+</view>
+ </view>
+ <view>
+  <view hover-class="bg" bindtap="numBtn" data-id="0">0</view>
+  <view hover-class="bg" bindtap="dotBtn" data-id=".">.</view>
+  <view hover-class="bg" bindtap="opBtn" data-id="=">=</view>
+
+ </view>
+
 </view>

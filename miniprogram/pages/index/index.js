@@ -5,24 +5,85 @@ Page({
    * 页面的初始数据
    */
   data: {
-    result: '尚未比较',
-    num1: 0,
-    num2: 0
+    op: '',
+    num: '0',
   },
-  fromsubmit(e) {
-    // console.log(e);
-    this.data.num1 = Number(e.detail.value.num1)
-    this.data.num2 = Number(e.detail.value.num2)
-    let result = ''
-    if (this.data.num1 > this.data.num2) {
-      result = '第一个数大'
-    } else if (this.data.num1 < this.data.num2) {
-      result = '第二个数大'
+  result: null,
+  isClear: true,
+  numBtn: function (e) {
+    let num = e.target.dataset.id
+    if (this.data.num === '0' || this.isClear) {
+      this.setData({
+        num: num
+      })
+      this.isClear = false
     } else {
-      result = '两个数一样大'
+      this.setData({
+        num: this.data.num + num
+      })
+    }
+  },
+  opBtn: function (e) {
+
+    let op = this.data.op
+    let num = Number(this.data.num)
+    this.setData({
+      op: e.target.dataset.id
+    })
+    if (this.isClear) {
+      return
+    }
+    this.isClear = true
+    if (this.result === null) {
+      this.result = num
+      return
+    }
+    if (op === '+') {
+      this.result = this.result + num
+    } else if (op === '-') {
+      this.result = this.result - num
+    } else if (op === '*') {
+      this.result = this.result * num
+    } else if (op === '/') {
+      this.result = this.result / num
     }
     this.setData({
-      result: result
+      num: this.result
+    })
+  },
+  dotBtn: function (e) {
+    if (this.isClear) {
+      this.setData({
+        num: '0.'
+      })
+      this.isClear = false
+      return
+    }
+    if (this.data.num.indexOf('.') >= 0) {
+      return
+    }
+    this.setData({
+      num: this.data.num + '.'
+    })
+  },
+  delBtn: function (e) {
+    var num = this.data.num.substr(0, this.data.num.length - 1)
+    if (this.data.num === '') {
+      this.setData({
+        num: 0
+      })
+    } else {
+      this.setData({
+        num: num
+      })
+    }
+  },
+  resetBtn: function (e) {
+    this.result = null
+    this.isClear = false
+    this.setData({
+      num: '0',
+      op: ''
     })
   },
   /**

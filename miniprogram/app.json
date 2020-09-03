@@ -6,7 +6,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#369",
-    "navigationBarTitleText": "比较",
+    "navigationBarTitleText": "计算器",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
