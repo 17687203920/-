@@ -1,0 +1,11 @@
+<!--pages/home/child/goods/goods.wxml-->
+<view class="goods">
+  <image class="image" src="{{goods.show.img}}" mode="widthFix" />
+  <view class="desc-info">
+    <view class="title">{{goods.title}}</view>
+    <view class="info">
+      <text class="price">￥{{goods.price}}</text>
+      <text class="cfav">☆{{goods.cfav}}</text>
+    </view>
+  </view>
+</view>

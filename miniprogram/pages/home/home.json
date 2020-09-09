@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "tab-control":"/component/tab-control/tab-control",
+    "swiper":"/component/swiper/swiper",
+    "recommend":"./child/recommend/recommend",
+    "goodsitem":"./child/goodsitem/goodsitem",
+    "back-top":"/component/back-top/back-top"
+  }
 }

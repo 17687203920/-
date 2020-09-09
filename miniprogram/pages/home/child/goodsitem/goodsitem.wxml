@@ -1,0 +1,7 @@
+<!--pages/home/child/goodsitem/goodsitem.wxml-->
+<view class="goods">
+  <block wx:for="{{goodsitem}}" wx:key="index" >
+        <goods class="goodsitem" goods="{{item}}"  />
+  </block>
+</view>
+

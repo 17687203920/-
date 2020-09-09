@@ -1,1 +1,14 @@
 /* miniprogram/pages/home/home.wxss */
+.popular image{ 
+  width: 100%;
+  border-bottom: 8rpx solid #eee;
+  padding-bottom: 10rpx;
+}
+.fiexd {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+

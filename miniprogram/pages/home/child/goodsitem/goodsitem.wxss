@@ -1,0 +1,9 @@
+/* pages/home/child/goodsitem/goodsitem.wxss */
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.goodsitem {
+  width: 48%;
+}

@@ -1,0 +1,24 @@
+/* pages/home/child/goods/goods.wxss */
+
+.goods {
+    text-align: center;
+    color: #333;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    padding: 85prx;
+}
+
+.goods > image{
+      width: 100%;
+      border-radius: 10rpx;
+}
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+.info .price {
+  color: #ff5777;
+  padding: 10rpx;
+}

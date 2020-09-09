@@ -1,0 +1,10 @@
+<!--轮播组件-->
+<swiper circular autoplay class="swiper">
+  <block wx:for="{{banner}}" wx:key="index">
+    <a href="{{item.link}}">
+      <swiper-item class="swiper-item">
+        <image src="{{item.image}}" mode="widthFix" />
+      </swiper-item>
+    </a>
+  </block>
+</swiper>

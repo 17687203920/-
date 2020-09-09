@@ -1,0 +1,10 @@
+<!--tab-control自定义组件  -->
+<view class="tab-control" >
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="tab-item {{ carrentIndex == index ? 'active' : ''}}"
+    data-index="{{index}}"
+    bindtap="carrentIndex">
+    {{item}}
+  </view>
+  </block>
+</view>
